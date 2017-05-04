@@ -1,0 +1,73 @@
+https://github.com/torvalds/linux
+
+https://github.com/AlbertGithubHome/linux
+
+git@github.com:torvalds/linux.git
+git@github.com:AlbertGithubHome/linux.git
+
+给你一个Pull Request的机会
+
+
+
+
+我们一直用GitHub作为免费的远程仓库，如果是个人的开源项目，放到GitHub上是完全没有问题的。其实GitHub还是一个开源协作社区，通过GitHub，既可以让别人参与你的开源项目，也可以参与别人的开源项目。
+
+在GitHub出现以前，开源项目开源容易，但让广大人民群众参与进来比较困难，因为要参与，就要提交代码，而给每个想提交代码的群众都开一个账号那是不现实的，因此，群众也仅限于报个bug，即使能改掉bug，也只能把diff文件用邮件发过去，很不方便。
+
+但是在GitHub上，利用Git极其强大的克隆和分支功能，广大人民群众真正可以第一次自由参与各种开源项目了。
+
+如何参与一个开源项目呢？比如人气极高的bootstrap项目，这是一个非常强大的CSS框架，你可以访问它的项目主页https://github.com/twbs/bootstrap，点“Fork”就在自己的账号下克隆了一个bootstrap仓库，然后，从自己的账号下clone：
+
+git clone git@github.com:michaelliao/bootstrap.git
+
+一定要从自己的账号下clone仓库，这样你才能推送修改。如果从bootstrap的作者的仓库地址git@github.com:twbs/bootstrap.git克隆，因为没有权限，你将不能推送修改。
+
+Bootstrap的官方仓库twbs/bootstrap、你在GitHub上克隆的仓库my/bootstrap，以及你自己克隆到本地电脑的仓库，他们的关系就像下图显示的那样：
+
+github-repos
+
+如果你想修复bootstrap的一个bug，或者新增一个功能，立刻就可以开始干活，干完后，往自己的仓库推送。
+
+如果你希望bootstrap的官方库能接受你的修改，你就可以在GitHub上发起一个pull request。当然，对方是否接受你的pull request就不一定了。
+
+如果你没能力修改bootstrap，但又想要试一把pull request，那就Fork一下我的仓库：https://github.com/michaelliao/learngit，创建一个your-github-id.txt的文本文件，写点自己学习Git的心得，然后推送一个pull request给我，我会视心情而定是否接受。
+小结
+
+    在GitHub上，可以任意Fork开源仓库；
+
+    自己拥有Fork后的仓库的读写权限；
+
+    可以推送pull request给官方仓库来贡献代码。
+
+###正文###
+
+我们都知道Git是一个分布式的版本控制系统，最初由Linus Torvalds编写，用作Linux内核代码的管理。在正式推出后，Git在其它项目中也取得了很大成功，尤其是在Ruby社区中。目前，包括Rubinius、Merb和Bitcoin在内的很多知名项目都使用了Git。Git同样可以被诸如Capistrano和Vlad the Deployer这样的部署工具所使用。
+
+而Github是开发者使用git工具来管理代码的托管网站，我们可以将Github作为免费的远程仓库来存放我们个人的开源项目，当然如果你想建一个私有的仓库，Github网站也是允许的，只不过你要支付一定的费用。
+
+Github的强大之处绝不仅仅是作为免费的远程仓库这么简单，真正的强大之处在于它的社区交互，允许积极上进的开发者来贡献他们自己的力量，参与别人的开源项目的开发，假想如果没有Github我们要怎样修改一个开源软件的bug呢？我们只能根据软件作者提供的代码地址克隆出一份源代码，然后在找到导致bug的原因并改正，最后将改正后的代码连同修改说明一并通过邮件或者其他方式发送给软件开发者，然后软件的开发者每天都要查询邮件，再经过仔细比对决定哪些需要修改，这严重影响了开源软件的发展。
+
+但是自从Github问世以来，广大开发者的热情被积极的调动了起来，可以利用网站上自带的Fork功能和git强大的克隆、分支功能，积极参与各种开源项目的开发，修正其中的问题，大大推动了开源然软件的发展。
+
+想要在Github网站上参与开源软件的开发，首先需要注册一个github账号，以git创始者torvalds的项目linux为例，linux系统在开发领域无人不知，就是这个项目的源码也托管在Github网站上，我们使用注册的站成功登录后，可以访问linux项目的主页[https://github.com/torvalds/](https://github.com/torvalds/)linux，点击网站上的按钮“Fork”，就在自己的账号（我的账号AlbertGithubHome）下克隆了一个linux项目的仓库，地址为指向自己仓库的地址[https://github.com/AlbertGithubHome/linux](https://github.com/AlbertGithubHome/linux)。
+
+“Fork”之后你就可以从自己的账号下clone这个仓库了，克隆的命令为：
+
+```
+git clone git@github.com:AlbertGithubHome/linux.git
+
+```
+这里需要注意的是如果你想修改原有代码，一定要从自己的仓库下克隆才能将修改的代码上传，如果你从项目的原地址`git clone git@github.com:torvalds/linux.git`克隆，你是不具备上传权限的，也就是说你只能看，也能在本地改，就是不能上传。
+
+克隆完代码后你就可以修改linux内核的源码了，如果你发现了其中的一个bug，那你就在本地修改，修改完成后推送到自己在Github上的远程仓库，如果你希望torvalds可以接收你的修改，你可以在Github的网站上linux项目向torvalds发起Pull Request请求，请求torvalds可以接受你的修改，并修改linux内核的源码。
+
+这时候就会面临一个尴尬的情景，作为Github新手你很想为开源项目做贡献，很想尝试一下Pull Request功能，很想自己的修改能够被项目发起者接受，可是、可是、可是自己又没有能力去修改linux内核的代码，以现在的水平，强行修改后发起Pull Request也不会被接受，那么这里给了你一个机会，这也是写本文的意义。
+
+如果你真的很想试一下Pull Request功能，你可以“Fork”一下我的项目，项目地址为[https://github.com/AlbertGithubHome/TestPullRequest](https://github.com/AlbertGithubHome/TestPullRequest)，Fork之后clone到本地，然后在对应的目录下添加一个文件，文件可以写点关于的git的知识放到目录gitlessons中，或者写一点关于学习git的感悟，放到目录studynotes中，文件命名规则为“你的Githubid_文章主旨.txt”，文件最好为.txt或者.md格式，例如“Albert_git特点.md”，添加上传后先推送到你自己的远程仓库中，再去Github网站上像我发送一个Pull Request请求，只要是合法的内容我都会合并到项目中供大家学习。
+
+###总结###
+- 本文的目的就是为了给大家提供一个使用Github网站上的Pull Request功能的机会，如果你想练习git用法，并且想贡献自己的智，那么你可以向我发送Pull Request请求。
+- 本文旨在提供练习Pull Request的机会，并没有教大家怎样使用git，git的简单语法大家可以去网上搜索使用，关于克隆、添加、修改、上传的语法也很简单。
+- 本文中凡涉及`AlbertGithubHome`均是我在Github网站上的用户名，大家在实际操作中要换成自己的用户名。
+- 本文最后再次重申一下测试地址[https://github.com/AlbertGithubHome/TestPullRequest](https://github.com/AlbertGithubHome/TestPullRequest)
+
