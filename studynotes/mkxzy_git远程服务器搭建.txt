@@ -1,0 +1,54 @@
+虽然git是分布式服务器，可以不用中心服务器来协作，但是有时候还是需要一个中心服务器更加方便
+要不然github也不会如此火爆。
+
+搭建git服务器目前最流行的是gitlab，功能和github类似。我给大家介绍一种更加简单的方式，
+用来学习。
+
+仅限于CentOS 7
+
+安装httpd
+yum install httpd -y
+
+安装gitweb
+yum install gitweb -y
+
+ 
+
+创建项目根目录
+
+$  sudo mkdir /opt/git
+
+ 
+
+$ git init --bare
+
+ 
+
+设置ACL
+
+$ chown -R apache:apache /opt/git
+
+添加用户
+
+$ htpasswd [-c] /opt/git/.htpasswd xiezhiyan
+
+ 
+
+配置/etc/gitweb.conf
+
+$projectroot='/opt/git'
+
+配置/etc/httpd/conf.d/git.conf
+SetEnv GIT_PROJECT_ROOT /opt/git
+SetEnv GIT_HTTP_EXPORT_ALL
+ScriptAlias /git/ /usr/local/libexec/git-core/git-http-backend/ #设置git的主目录
+#SetEnv REMOTE_USER=$REDIRECT_REMOTE_USER
+
+ 
+
+<LocationMatch "^/git/*">
+AuthType Basic
+AuthName "Git Access"
+AuthUserFile /opt/git/.htpasswd
+Require valid-user
+</LocationMatch>
