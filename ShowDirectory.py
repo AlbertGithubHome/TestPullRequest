@@ -27,8 +27,9 @@ def dfs_showdir(path, depth):
         if '.git' not in item:
             print("|      " * depth + "+--" + item)
             
-            if os.path.isdir(item):
-                dfs_showdir(item, depth +1)
+            newitem = path +'/'+ item
+            if os.path.isdir(newitem):
+                dfs_showdir(newitem, depth +1)
 
 if __name__ == '__main__':
-    dfs_showdir('./', 0)
+    dfs_showdir('.', 0)
