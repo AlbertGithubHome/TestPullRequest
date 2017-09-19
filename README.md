@@ -21,3 +21,23 @@ This is a test project for everyone that can practice to use "Pull Request".
 - 文件最好是txt文件或者是md文件，文件名的格式为“你的githubid_文章主旨.txt”或者“你的githubid_文章主旨.md”，可以参考我写的几篇示例文件“./gitlessons/Albert_git简介.txt”、“./gitlessons/Albert_git简介.txt”和“./studynotes/Albert_git感悟.md”，只要你的内容不涉及到违法内容、描述得体，我都会把你的提交合并到我的项目中来供大家学习。
 
 
+## 目录结构
+
+```
+root:[.]
++--gitlessons
+|      +--Albert_git特点.md
+|      +--Albert_git简介.txt
++--LICENSE
++--README.md
++--ShowDirectory.py
++--studynotes
+|      +--Albert_git感悟.md
+|      +--Anilople_git很实用
+|      +--mkxzy_git远程服务器搭建.txt
+|      +--myfile.txt
+|      +--testpullrequest
+|      +--xuefeng yin_git测试.txt
++--testfiles
+|      +--test.txt
+```
